@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+{% load static %}
+<body style="background-color:#d8bfd8;">
+    <header align="center" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <a href="{% url 'home' %}"><img src="{% static 'main/images/hb.JPG' %}" width=170px align="left"></a>
+            <ul class="nav" style="width: 100%;text-align: center;">
+                <li class="nav-item">
+                    <div class="p-4"><h2><a class="p-2 text-dark" href="{% url 'deserts' %}">  Наши десерты  </a></h2></div>
+                </li>
+                <li class="nav-item">
+                    <div class="p-4"><h2><a class="p-2 text-dark" href="{% url 'drinks' %}">  Горячие напитки  </a></h2></div>
+                </li>
+                <li class="nav-item">
+                    <div class="p-4"><h2><a class="p-2 text-dark" href="{% url 'add' %}">  Добавить новый заказ  </a></h2></div>
+                </li>
+                <li class="nav-item">
+                    <div class="p-4"><h2><a class="p-2 text-dark" href="{% url 'report' %}">  Сводный отчёт  </a></h2></div>
+                </li>
+                <li class="nav-item">
+                    <div class="p-4"><h2><a class="p-2 text-dark" href="{% url 'contact-us' %}">  Контакты </a></h2></div>
+                </li>
+            </ul>
+        <a href="{% url 'home' %}"><img src="{% static 'main/images/hb.JPG' %}" width=170px align="left"></a>
+    </header>
+
+    <div class="container">
+        {% block content %} {% endblock %}</div>
+
+</body>
+</html>

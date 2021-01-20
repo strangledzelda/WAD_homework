@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Новый заказ
+{% endblock %}
+
+
+{% block content %}
+    <br><br>
+    {% load static %}
+    <h1>Добавление нового заказа</h1><br><br>
+    <form method="post">
+        {%  csrf_token %}
+        <h4>Введите Ваше имя</h4>
+        <br>
+        {{ form.customer }}
+        <br>
+        <table>
+            <tr>
+                <th>
+                    <h4>Выберите десерты</h4>
+                    <br>
+                    {{ form.food_choices }}
+                </th>
+                <th></th>
+                <th class="p-4">
+                    <h4>Выберите напитки</h4>
+                    <br>
+                    {{ form.drink_choices }}
+                </th>
+            </tr>
+        </table>
+        <br><br>
+        <h5>Нужна помощь с выбором? Посетите наш каталог <a class="p-2 text-dark" href="{% url 'deserts' %}">десертов</a> и <a class="p-2 text-dark" href="{% url 'drinks' %}">напитков</a></h5>
+        <br><br>
+        <h4>Дополнительные пожелания по заказу</h4>
+        {{ form.details }}
+        <br><br>
+        <button type="submit" class="btn btn-success"><h3>Добавить</h3></button>
+        <span>{{ error }}</span>
+    </form>>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Отчёт
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <h1 align="center">Сводный отчёт по заказам</h1>
+    {% if orders %}
+        <table cellpadding=80px style="table:table-striped">
+            {% for el in orders %}
+                <tr>
+                    <th>{{ el.id }}</th>
+                    <th>{{ el.customer }}</th>
+                    <th>
+                    <div class="row">
+                        {% for i in el.food_choices.all %}
+                            {{ i.title }}
+                            <br>
+                        {% endfor %}
+                    </div>
+                    </th>
+                    <th>
+                        <div class="row">
+                        {% for i in el.drink_choices.all %}
+                            {{ i.title }}
+                            <br>
+                        {% endfor %}
+                        </div>
+                    </th>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Нет ни одной записи!</p>
+    {% endif %}
+{% endblock %}

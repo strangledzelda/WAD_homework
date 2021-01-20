@@ -1,0 +1,40 @@
+{% extends 'main/base2.html' %}
+
+{% block title %}
+Горячие напитки
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <h1 align="center">Горячие напитки</h1>
+    <br><br>
+    <table cellpadding=40px>
+        <tr>
+            <th><h3>Ягодный чай</h3></th>
+            <th><img src="{% static 'main/images/berry_tea12.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Чёрный чай с лимоном</h3></th>
+            <th><img src="{% static 'main/images/black_tea.jpg' %}" width=500px height=350px></th>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <th><h3>Облепиховый чай с мёдом</h3></th>
+            <th><img src="{% static 'main/images/buckthorn_tea.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Зелёный чай с жасмином</h3></th>
+            <th><img src="{% static 'main/images/green_tea.JPG' %}" width=500px height=350px></th>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <th><h3>Чёрный кофе</h3></th>
+            <th><img src="{% static 'main/images/black_coffee.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Латте</h3></th>
+            <th><img src="{% static 'main/images/latte.jpg' %}" width=500px height=350px></th>
+        </tr>
+    </table>
+{% endblock %}

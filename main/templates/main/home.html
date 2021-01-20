@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% load static %}
+
+
+{% block content %}
+    <br><br>
+    <h1>Добро пожаловать!</h1>
+    <br>
+    <h2>На сайте нашей булочной Вы можете ознакомиться с <a class="p-2 text-dark" href="{% url 'deserts' %}">ассортиментом выпечки, десертов</a> и <a class="p-2 text-dark" href="{% url 'drinks' %}">горячих напитков</a>, а также <a class="p-2 text-dark" href="{% url 'add' %}">оформить заказ.</a></h2>
+    <br>
+    <h2> Кроме того, доступен <a class="p-2 text-dark" href="{% url 'contact-us' %}">раздел с контактной информацией.</a></h2>
+    <br>
+    <h2>Приятного Вам чаепития!</h2>
+    <br><br>
+    <img src="{% static 'main/images/bakery2.jpg' %}" width=1100px>
+    <br><br>
+{% endblock %}

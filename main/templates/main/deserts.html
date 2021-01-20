@@ -1,0 +1,42 @@
+{% extends 'main/base2.html' %}
+
+{% block title %}
+Десерты
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <br><br>
+    <h1 align="center">Наши десерты и выпечка</h1>
+    <br><br>
+    <table cellpadding=40px>
+        <tr>
+            <th><h3>Тирамису</h3></th>
+            <th><img src="{% static 'main/images/tiramisu.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Шоколадный эклер</h3></th>
+            <th><img src="{% static 'main/images/choc_eclair.jpg' %}" width=500px height=350px></th>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <th><h3>Медовик</h3></th>
+            <th><img src="{% static 'main/images/honey.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Клубничное мороженое</h3></th>
+            <th><img src="{% static 'main/images/icecream_str.jpg' %}" width=500px height=350px></th>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <th><h3>Шоколадное мороженое</h3></th>
+            <th><img src="{% static 'main/images/icecream_choc.jpg' %}" width=500px height=350px></th>
+            <th></th>
+            <th><h3>Фисташковое мороженое</h3></th>
+            <th><img src="{% static 'main/images/icecream_pist.jpg' %}" width=500px height=350px></th>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+{% endblock %}
